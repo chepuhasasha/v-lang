@@ -5,7 +5,7 @@ This plugin for VUE is designed to save you from having to maintain language dic
 ---
 
 [![stars](https://badgen.net/github/stars/chepuhasasha/v-lang)](https://github.com/chepuhasasha/v-lang)
-[![latest version](https://badgen.net/npm/v/@chepuhasasha/v-lang)](https://github.com/sashachepuha/v-lang)
+[![latest version](https://badgen.net/npm/v/@chepuhasasha/v-lang)](https://github.com/chepuhasasha/v-lang)
 [![license](https://badgen.net/github/license/chepuhasasha/v-lang?color=cyan)](https://github.com/chepuhasasha/v-lang/blob/main/LICENSE)
 [![install size](https://badgen.net/packagephobia/install/@chepuhasasha/v-lang?label=npm+install)](https://packagephobia.now.sh/result?p=@chepuhasasha/v-lang)
 [![open issues](https://badgen.net/github/open-issues/chepuhasasha/v-lang?label=issues)](https://github.com/chepuhasasha/v-lang/issues)
