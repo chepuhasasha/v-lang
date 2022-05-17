@@ -4,11 +4,11 @@ This plugin for VUE is designed to save you from having to maintain language dic
 
 ---
 
-[![stars](https://badgen.net/github/stars/sashachepuha/v-lang)](https://github.com/sashachepuha/v-lang)
-[![latest version](https://badgen.net/npm/v/@sashachepuha/v-lang)](https://github.com/sashachepuha/v-lang)
-[![license](https://badgen.net/github/license/sashachepuha/v-lang?color=cyan)](https://github.com/sashachepuha/v-lang/blob/main/LICENSE)
-[![install size](https://badgen.net/packagephobia/install/@sashachepuha/v-lang?label=npm+install)](https://packagephobia.now.sh/result?p=@sashachepuha/v-lang)
-[![open issues](https://badgen.net/github/open-issues/sashachepuha/v-lang?label=issues)](https://github.com/sashachepuha/v-lang/issues)
+[![stars](https://badgen.net/github/stars/chepuhasasha/v-lang)](https://github.com/chepuhasasha/v-lang)
+[![latest version](https://badgen.net/npm/v/@chepuhasasha/v-lang)](https://github.com/sashachepuha/v-lang)
+[![license](https://badgen.net/github/license/chepuhasasha/v-lang?color=cyan)](https://github.com/chepuhasasha/v-lang/blob/main/LICENSE)
+[![install size](https://badgen.net/packagephobia/install/@chepuhasasha/v-lang?label=npm+install)](https://packagephobia.now.sh/result?p=@chepuhasasha/v-lang)
+[![open issues](https://badgen.net/github/open-issues/chepuhasasha/v-lang?label=issues)](https://github.com/chepuhasasha/v-lang/issues)
 
 ## Basic Usage
 
@@ -17,7 +17,7 @@ main.ts
 ```js
 import { createApp } from "vue";
 import App from "./App.vue";
-import { VLang } from "@sashachepuha/vue-localization-plagin";
+import { VLang } from "@chepuhasasha/v-lang";
 
 createApp(App).use(VLang).mount("#app");
 ```
