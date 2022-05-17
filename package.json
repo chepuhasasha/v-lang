@@ -1,0 +1,42 @@
+{
+  "name": "v-lang",
+  "version": "0.0.1",
+  "description": "This plugin for VUE is designed to save you from having to maintain language dictionaries for the text content of your Vuejs application and make it easier to localize it. If you are tired of the endless naming of variables in the language dictionary, this plugin is for you.",
+  "main": "lib/vlang.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "format": "npx prettier --write src/* && npm run lint:fix",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sashachepuha/v-lang.git"
+  },
+  "keywords": [
+    "vue",
+    "localization",
+    "vue plagin",
+    "vue localization"
+  ],
+  "author": {
+    "name": "Sergey Batukov",
+    "email": "sashachepuha@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sashachepuha/v-lang/issues"
+  },
+  "homepage": "https://github.com/sashachepuha/v-lang#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.24.0",
+    "@typescript-eslint/parser": "^5.24.0",
+    "eslint": "^8.15.0",
+    "eslint-config-prettier": "^8.5.0",
+    "husky": "^8.0.1",
+    "prettier": "^2.6.2",
+    "typescript": "^4.6.4"
+  }
+}
