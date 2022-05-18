@@ -3,7 +3,12 @@ interface App {
         value: string;
     }) => void) => void;
 }
-export declare const VLang: {
-    install(Vue: App, separator?: string): void;
+declare const VLang: {
+    defaultLand: string;
+    seporator: string;
+    install(Vue: App, options?: {
+        seporator: string;
+        defaultLand: string;
+    }): void;
 };
-export {};
+export default VLang;
