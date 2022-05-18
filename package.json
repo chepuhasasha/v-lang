@@ -1,6 +1,6 @@
 {
   "name": "@chepuhasasha/v-lang",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "This plugin for VUE is designed to save you from having to maintain language dictionaries for the text content of your Vuejs application and make it easier to localize it. If you are tired of the endless naming of variables in the language dictionary, this plugin is for you.",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
