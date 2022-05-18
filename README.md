@@ -82,8 +82,8 @@ The value for your key will be displayed.
 
 ```js
 const options = {
-  defaultLand: "#"
-  lang: "ru"
+  seporator: "#"
+  defaultLand: "ru"
 }
 createApp(App).use(VLang, options).mount("#app");
 ```
