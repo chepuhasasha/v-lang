@@ -16,25 +16,23 @@ const VLang = {
       defaultLand: "en",
     }
   ): void {
-    const seporator = options.seporator;
-    const defaultLand = options.defaultLand;
     Vue.directive("lang", (el: HTMLElement, binding) => {
       const key = binding.value
         ? binding.value
         : navigator.language.substring(0, 2);
       el.childNodes.forEach((children) => {
-        if (children.textContent?.includes(seporator)) {
+        if (children.textContent?.includes(options.seporator)) {
           const dic: { [key: string]: string } = {};
-          children.textContent.split(seporator).forEach((content) => {
-            dic[content.slice(0, key.length)] = content.slice(2);
+          children.textContent.split(options.seporator).forEach((content) => {
+            dic[content.slice(0, key.length)] = content.slice(key.length);
           });
           if (dic[key]) {
             children.textContent = dic[key];
-          } else if (dic[defaultLand]) {
-            children.textContent = dic[defaultLand];
+          } else if (dic[options.defaultLand]) {
+            children.textContent = dic[options.defaultLand];
           } else {
             console.error(
-              `[v-lang] Default lang: "${defaultLand}".\nNo default translation!`
+              `[v-lang] Default lang: "${options.defaultLand}".\nNo default translation!`
             );
             children.textContent = "ERROR";
           }
@@ -45,3 +43,4 @@ const VLang = {
 };
 
 export default VLang;
+

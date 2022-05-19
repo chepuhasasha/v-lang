@@ -1,5 +1,7 @@
 # v-lang
 
+![header](./assets/HEADER.svg)
+
 This plugin for VUE is designed to save you from having to maintain language dictionaries for the text content of your Vuejs application and make it easier to localize it. If you are tired of the endless naming of variables in the language dictionary, this plugin is for you.
 
 [![stars](https://badgen.net/github/stars/chepuhasasha/v-lang)](https://github.com/chepuhasasha/v-lang)
@@ -8,19 +10,24 @@ This plugin for VUE is designed to save you from having to maintain language dic
 [![install size](https://badgen.net/packagephobia/install/@chepuhasasha/v-lang?label=npm+install)](https://packagephobia.now.sh/result?p=@chepuhasasha/v-lang)
 [![open issues](https://badgen.net/github/open-issues/chepuhasasha/v-lang?label=issues)](https://github.com/chepuhasasha/v-lang/issues)
 
+## Contents
+
+- [Quick start](#quick-start)
+- [Custom usage](#custom-usage)
+- [Settings](#settings)
+- [Features of use](#features-of-use)
+
 ---
 
-## Basic Usage
+## Quick start
 
-### Installation
+### Install
 
 ```
 npm install @chepuhasasha/v-lang
 ```
 
-### Connection
-
-Include plugin in `main.ts/js`
+### Register the plugin in `main.ts/js`
 
 ```js
 import { createApp } from "vue";
@@ -30,34 +37,40 @@ import VLang from "@chepuhasasha/v-lang";
 createApp(App).use(VLang).mount("#app");
 ```
 
-> Write the text in the format `<seporator><language><text> - $ru Привет!`
+### Use in template
 
-### Auto mode
+If you do not specify a value for the `v-lang` directive, the plugin will automatically detect the language. The **first two** letters of `novigator.language` are used to define the language. (`ru-RU` - language will be `ru`)
 
-If you do not specify a value for the v-lang directive, the plugin will automatically detect the language. The **first two** letters of `novigator.language` are used to determine the language. (`ru-RU` - language will be `ru`)
+Write the text in the format `<seporator><language><text> - $ru Русский текст`
 
-> If your layout does not have a language suitable for the user's language, then the plugin will set the value corresponding to the `en` key. How to change the default language, see the **[settings](#custom-settings)** section.
+<div style='display: flex; width: 100%; justify-content: center; padding: 20px'>
+  <img src='./assets/FORMAT.svg'>
+</div>
 
 ```html
 <template>
-  <div v-lang>$ru Привет! $en Hi!</div>
+  <button v-lang>$ru Русский текст $en English text</button>
 </template>
 ```
 
-### Dinamic mode
+> If your layout does not have a language suitable for the user's language, then the plugin will set the value corresponding to the `en` key. How to change the default language, see the **[settings](#custom-settings)** section.
 
-The value for your key will be displayed.
+---
 
-> The key can be a string of any length, for example:
->
-> ```html
-> <div v-lang="'some key'">$some key Привет! $en Hi!</div>
-> ```
+## Custom usage
+
+You can dynamically pass any key to the `v-lang` directive.
+The key can be a string of any length, for example:
+
+```html
+<div v-lang="'some key'">$some key Привет! $some key 2 Hi!</div>
+```
+
+Example with dynamic key switching:
 
 ```html
 <template>
-  <div v-lang="lang">$ru Привет! $en Hi!</div>
-  <button @click="changeLang">CHANGE LANG</button>
+  <button @click="changeLang" v-lang="lang">$ru Русский $en English</button>
 </template>
 
 <script setup lang="ts">
@@ -73,12 +86,12 @@ The value for your key will be displayed.
 
 ---
 
-## Custom settings
+## Settings
 
-| option      | type       | description                                           |
-| :---------- | ---------- | ----------------------------------------------------- |
-| seporator   | _`string`_ | You can set your own separator (default is `"$"`)     |
-| defaultLand | _`string`_ | You can set your own default lang (default is `"en"`) |
+| option      | type       | default |
+| :---------- | ---------- | ------- |
+| seporator   | _`string`_ | `"$"`   |
+| defaultLand | _`string`_ | `"en"`  |
 
 ```js
 const options = {
@@ -90,17 +103,18 @@ createApp(App).use(VLang, options).mount("#app");
 
 ---
 
-#### ❌ Do not do that!
+## Features of use
+
+❌ Do not do that!
 
 ```html
-<!-- bad bad bad.... 💩-->
 <div v-lang="'ru'">
   <div>$ru Текст $en Text</div>
   <div>$ru Текст $en Text</div>
 </div>
 ```
 
-#### ✔️ Do it like this!
+✔️ Do it like this!
 
 ```html
 <div>
