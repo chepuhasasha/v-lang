@@ -43,4 +43,3 @@ const VLang = {
 };
 
 export default VLang;
-
