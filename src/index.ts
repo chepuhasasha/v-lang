@@ -9,10 +9,10 @@ const VLang = {
   install(
     Vue: App,
     options: {
-      seporator: string;
+      separator: string;
       defaultLand: string;
     } = {
-      seporator: "$",
+      separator: "$",
       defaultLand: "en",
     }
   ): void {
@@ -21,9 +21,9 @@ const VLang = {
         ? binding.value
         : navigator.language.substring(0, 2);
       el.childNodes.forEach((children) => {
-        if (children.textContent?.includes(options.seporator)) {
+        if (children.textContent?.includes(options.separator)) {
           const dic: { [key: string]: string } = {};
-          children.textContent.split(options.seporator).forEach((content) => {
+          children.textContent.split(options.separator).forEach((content) => {
             dic[content.slice(0, key.length)] = content.slice(key.length);
           });
           if (dic[key]) {
@@ -43,3 +43,4 @@ const VLang = {
 };
 
 export default VLang;
+

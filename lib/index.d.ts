@@ -5,7 +5,7 @@ interface App {
 }
 declare const VLang: {
     install(Vue: App, options?: {
-        seporator: string;
+        separator: string;
         defaultLand: string;
     }): void;
 };

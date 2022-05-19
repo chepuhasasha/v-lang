@@ -41,7 +41,7 @@ createApp(App).use(VLang).mount("#app");
 
 If you do not specify a value for the `v-lang` directive, the plugin will automatically detect the language. The **first two** letters of `novigator.language` are used to define the language. (`ru-RU` - language will be `ru`)
 
-Write the text in the format `<seporator><language><text> - $ru Русский текст`
+Write the text in the format `<separator><language><text> - $ru Русский текст`
 
 <div style='display: flex; width: 100%; justify-content: center; padding: 20px'>
   <img src='https://raw.githubusercontent.com/chepuhasasha/v-lang/4483e0f8d510f86fbeb60f13aea003b971bc106f/assets/FORMAT.svg'>
@@ -90,12 +90,12 @@ Example with dynamic key switching:
 
 | option      | type       | default |
 | :---------- | ---------- | ------- |
-| seporator   | _`string`_ | `"$"`   |
+| separator   | _`string`_ | `"$"`   |
 | defaultLand | _`string`_ | `"en"`  |
 
 ```js
 const options = {
-  seporator: "#"
+  separator: "#"
   defaultLand: "ru"
 }
 createApp(App).use(VLang, options).mount("#app");
