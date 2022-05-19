@@ -1,6 +1,6 @@
 # v-lang
 
-![header](https://raw.githubusercontent.com/chepuhasasha/v-lang/4483e0f8d510f86fbeb60f13aea003b971bc106f/assets/HEADER.svg)
+![header](https://raw.githubusercontent.com/chepuhasasha/v-lang/c9bab90eede231d7d92a0af304df82f6638cf294/assets/HEADER.svg)
 
 This plugin for VUE is designed to save you from having to maintain language dictionaries for the text content of your Vuejs application and make it easier to localize it. If you are tired of the endless naming of variables in the language dictionary, this plugin is for you.
 
@@ -44,7 +44,7 @@ If you do not specify a value for the `v-lang` directive, the plugin will automa
 Write the text in the format `<separator><language><text> - $ru Русский текст`
 
 <div style='display: flex; width: 100%; justify-content: center; padding: 20px'>
-  <img src='https://raw.githubusercontent.com/chepuhasasha/v-lang/4483e0f8d510f86fbeb60f13aea003b971bc106f/assets/FORMAT.svg'>
+  <img src='https://raw.githubusercontent.com/chepuhasasha/v-lang/c9bab90eede231d7d92a0af304df82f6638cf294/assets/FORMAT.svg'>
 </div>
 
 ```html
